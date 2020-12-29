@@ -64,10 +64,11 @@ const Player = ({
 			setCurrentSong(songs[(currentIndex - 1) % songs.length]);
 		}
 	};
-	// const animationPercentage = (songInfo.currentTime / songInfo.duration) * 100;
+	// Calculate Percentage
+	const animationPercentage = (songInfo.currentTime / songInfo.duration) * 100;
 	// Add the styles
 	const trackAnim = {
-		transform: `translateX(${songInfo.animationPercentage}%)`,
+		transform: `translateX(${animationPercentage}%)`,
 	};
 
 	return (
