@@ -3,7 +3,7 @@ import { faMusic } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = ({ setLibraryStatus, libraryStatus }) => {
 	return (
-		<nav>
+		<nav className={`${libraryStatus ? "squeezed" : ""}`}>
 			<h1>Waves</h1>
 			<button onClick={() => setLibraryStatus(!libraryStatus)}>
 				Library

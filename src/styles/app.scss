@@ -17,10 +17,30 @@ h4 {
 	color: rgb(100, 100, 100);
 }
 .App {
+	padding: 30px;
+	min-height: 100vh;
+	max-height: 1440px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
+	@media screen and (max-width: 768px) {
+		padding: 15px;
+	}
 	transition: all 0.5s ease;
 }
-.library-active {
-	margin-left: 20rem;
+// .library-active {
+// 	margin-left: 25%;
+// 	width: 75%;
+// }
+main {
+	width: 100%;
+	transition: all ease 0.5s;
+
+	&.squeezed {
+		width: 75%;
+		margin-left: 25%;
+	}
 }
 
 @import "./song.scss";

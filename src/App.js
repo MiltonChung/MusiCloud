@@ -59,35 +59,37 @@ function App() {
 	};
 
 	return (
-		<div className={`App ${libraryStatus ? "library-active" : ""}`}>
+		<div className="App">
 			<Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
-			<Song currentSong={currentSong} />
-			<Player
-				isPlaying={isPlaying}
-				setIsPlaying={setIsPlaying}
-				currentSong={currentSong}
-				audioRef={audioRef}
-				setSongInfo={setSongInfo}
-				songInfo={songInfo}
-				songs={songs}
-				setCurrentSong={setCurrentSong}
-				setSongs={setSongs}
-				activeLibraryHandler={activeLibraryHandler}
-			/>
-			<Library
-				audioRef={audioRef}
-				songs={songs}
-				setCurrentSong={setCurrentSong}
-				isPlaying={isPlaying}
-				setSongs={setSongs}
-				libraryStatus={libraryStatus}
-			/>
-			<audio
-				onLoadedMetadata={timeUpdateHandler}
-				onTimeUpdate={timeUpdateHandler}
-				ref={audioRef}
-				src={currentSong.audio}
-				onEnded={songEndHandler}></audio>
+			<main className={`${libraryStatus ? "squeezed" : ""}`}>
+				<Song currentSong={currentSong} />
+				<Player
+					isPlaying={isPlaying}
+					setIsPlaying={setIsPlaying}
+					currentSong={currentSong}
+					audioRef={audioRef}
+					setSongInfo={setSongInfo}
+					songInfo={songInfo}
+					songs={songs}
+					setCurrentSong={setCurrentSong}
+					setSongs={setSongs}
+					activeLibraryHandler={activeLibraryHandler}
+				/>
+				<Library
+					audioRef={audioRef}
+					songs={songs}
+					setCurrentSong={setCurrentSong}
+					isPlaying={isPlaying}
+					setSongs={setSongs}
+					libraryStatus={libraryStatus}
+				/>
+				<audio
+					onLoadedMetadata={timeUpdateHandler}
+					onTimeUpdate={timeUpdateHandler}
+					ref={audioRef}
+					src={currentSong.audio}
+					onEnded={songEndHandler}></audio>
+			</main>
 		</div>
 	);
 }

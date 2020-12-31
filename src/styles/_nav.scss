@@ -1,8 +1,26 @@
 nav {
-	min-height: 10vh;
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	width: 100%;
+	transition: all ease 0.5s;
+
+	&.squeezed {
+		width: 75%;
+		margin-left: 25%;
+	}
+	@media screen and (max-width: 768px) {
+		padding: 0px 15px;
+	}
+
+	h1 {
+		padding-left: 5px;
+
+		@media screen and (max-width: 768px) {
+			padding-left: 0px;
+		}
+	}
 
 	button {
 		background: transparent;
