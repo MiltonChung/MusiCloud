@@ -1,5 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faAngleLeft, faAngleRight, faPause } from "@fortawesome/free-solid-svg-icons";
+import {
+	faPlay,
+	faVolumeDown,
+	faVolumeUp,
+	faPause,
+	faStepForward,
+	faStepBackward,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Player = ({
 	songInfo,
@@ -10,8 +17,9 @@ const Player = ({
 	setIsPlaying,
 	songs,
 	setCurrentSong,
-	setSongs,
 	activeLibraryHandler,
+	volume,
+	setVolume,
 }) => {
 	const playSongHandler = () => {
 		isPlaying ? audioRef.current.pause() : audioRef.current.play();
@@ -55,6 +63,11 @@ const Player = ({
 		transform: `translateX(${animationPercentage}%)`,
 	};
 
+	const volumeHandler = e => {
+		setVolume(e.target.value);
+		audioRef.current.volume = volume / 100;
+	};
+
 	return (
 		<div className="player">
 			<div className="time-control">
@@ -76,24 +89,40 @@ const Player = ({
 				<p>{songInfo.duration ? getTime(songInfo.duration) : "0:00"}</p>
 			</div>
 			<div className="play-control">
-				<FontAwesomeIcon
-					onClick={() => skipTrackHandler("skip-back")}
-					className="skip-back"
-					size="2x"
-					icon={faAngleLeft}
-				/>
-				<FontAwesomeIcon
-					onClick={playSongHandler}
-					className="play"
-					size="2x"
-					icon={isPlaying ? faPause : faPlay}
-				/>
-				<FontAwesomeIcon
-					onClick={() => skipTrackHandler("skip-forward")}
-					className="skip-forward"
-					size="2x"
-					icon={faAngleRight}
-				/>
+				<div className="playerControl">
+					<FontAwesomeIcon
+						onClick={() => skipTrackHandler("skip-back")}
+						className="skip-back"
+						size="2x"
+						icon={faStepBackward}
+					/>
+					<FontAwesomeIcon
+						onClick={playSongHandler}
+						className="play"
+						size="2x"
+						icon={isPlaying ? faPause : faPlay}
+					/>
+					<FontAwesomeIcon
+						onClick={() => skipTrackHandler("skip-forward")}
+						className="skip-forward"
+						size="2x"
+						icon={faStepForward}
+					/>
+				</div>
+				<div className="volumeControl">
+					<FontAwesomeIcon icon={faVolumeDown} />
+					<div className="volume">
+						<input
+							type="range"
+							min="0"
+							max="100"
+							value={volume}
+							className="slider"
+							onChange={volumeHandler}
+						/>
+					</div>
+					<FontAwesomeIcon icon={faVolumeUp} />
+				</div>
 			</div>
 		</div>
 	);

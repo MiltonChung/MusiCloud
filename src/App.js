@@ -18,6 +18,7 @@ function App() {
 		duration: 0,
 	});
 	const [libraryStatus, setLibraryStatus] = useState(false);
+	const [volume, setVolume] = useState(60);
 
 	// Refs
 	const audioRef = useRef(null);
@@ -74,6 +75,8 @@ function App() {
 					setCurrentSong={setCurrentSong}
 					setSongs={setSongs}
 					activeLibraryHandler={activeLibraryHandler}
+					volume={volume}
+					setVolume={setVolume}
 				/>
 				<Library
 					audioRef={audioRef}

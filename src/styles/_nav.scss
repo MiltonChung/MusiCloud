@@ -14,8 +14,17 @@ nav {
 		padding: 0px 15px;
 	}
 
-	h1 {
+	.logo {
 		padding-left: 5px;
+		color: black;
+		font-size: 1.8rem;
+		text-decoration: none;
+		font-family: "Lato", sans-serif;
+		font-weight: bolder;
+
+		span {
+			color: #1b7ed4;
+		}
 
 		@media screen and (max-width: 768px) {
 			padding-left: 0px;
