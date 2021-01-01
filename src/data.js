@@ -1,15 +1,102 @@
 import { v4 as uuidv4 } from "uuid";
+import WaitForYou from "./songs/WaitForYou.mp3";
+import Starving from "./songs/Starving.mp3";
+import fumes from "./songs/fumes.mp3";
+import gold from "./songs/gold.mp3";
+import Maniac from "./songs/Maniac.mp3";
+import Ultralife from "./songs/Ultralife.mp3";
+import BlueberryFaygo from "./songs/BlueberryFaygo.mp3";
+import ThisIsMyVersion from "./songs/ThisIsMyVersion.mp3";
+
 function musicList() {
 	return [
 		{
-			name: "Beaver Creek",
-			cover:
-				"https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
-			artist: "Aso, Middle School, Aviino",
-			audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
-			color: ["#205950", "#2ab3bf"],
+			name: "Wait For You",
+			cover: "https://i1.sndcdn.com/artworks-000072754635-hcs91o-t500x500.jpg",
+			artist: "Elliott Yamin",
+			audio: `${WaitForYou}`,
+			color: ["#466371", "#E8C5A7"],
 			id: uuidv4(),
 			active: true,
+		},
+		{
+			name: "Starving",
+			cover:
+				"https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Starving_%28featuring_Zedd%29_%28Official_Single_Cover%29_by_Hailee_Steinfled_and_Grey.png/220px-Starving_%28featuring_Zedd%29_%28Official_Single_Cover%29_by_Hailee_Steinfled_and_Grey.png",
+			artist: "Hailee Steinfeld, Grey",
+			audio: `${Starving}`,
+			color: ["#17161D", "#791B1D"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "fumes",
+			cover: "https://images.genius.com/9d9e58c6b8f6642888f52bc3598e5b58.500x500x1.jpg",
+			artist: "EDEN",
+			audio: `${fumes}`,
+			color: ["#17181B", "#EAEAEA"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "gold",
+			cover:
+				"https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Vertigo_EDEN_Album_Cover.png/220px-Vertigo_EDEN_Album_Cover.png",
+			artist: "EDEN",
+			audio: `${gold}`,
+			color: ["#4F738A", "#9BA8C2"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "Maniac",
+			cover:
+				"https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/Conan_Gray_-_Maniac.png/220px-Conan_Gray_-_Maniac.png",
+			artist: "Conan Gray",
+			audio: `${Maniac}`,
+			color: ["#819EB5", "#F30000"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "Ultralife",
+			cover:
+				"https://upload.wikimedia.org/wikipedia/en/thumb/6/65/Ultralife_-_Oh_Wonder_%28Album_Cover%29.png/220px-Ultralife_-_Oh_Wonder_%28Album_Cover%29.png",
+			artist: "Oh Wonder",
+			audio: `${Ultralife}`,
+			color: ["#544C49", "#BFC0C2"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "Blueberry Faygo",
+			cover:
+				"https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Lil_Mosey_-_Blueberry_Faygo.png/220px-Lil_Mosey_-_Blueberry_Faygo.png",
+			artist: "Lil Mosey",
+			audio: `${BlueberryFaygo}`,
+			color: ["#00CDF7", "#006DBE"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "This Is My Version",
+			cover:
+				"https://t2.genius.com/unsafe/168x0/https%3A%2F%2Fimages.genius.com%2F8ecd370e93e9985807bd3e326d7d9c5a.1000x1000x1.jpg",
+			artist: "Conor Maynard",
+			audio: `${ThisIsMyVersion}`,
+			color: ["#817E87", "#D2CCC6"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "Snowstalgia",
+			cover:
+				"https://chillhop.com/wp-content/uploads/2020/10/0e5bb63f838ff92eeac142aae944e9f678df13c9-1024x1024.jpg",
+			artist: "invention_",
+			audio: "https://mp3.chillhop.com/serve.php/?mp3=10305",
+			color: ["#45418E", "#CDB6CA"],
+			id: uuidv4(),
+			active: false,
 		},
 		{
 			name: "Daylight",
@@ -51,26 +138,7 @@ function musicList() {
 			id: uuidv4(),
 			active: false,
 		},
-		{
-			name: "Under the City Stars",
-			cover:
-				"https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
-			artist: "Aso, Middle School, Aviino",
-			audio: "https://mp3.chillhop.com/serve.php/?mp3=10074",
-			color: ["#205950", "#2ab3bf"],
-			id: uuidv4(),
-			active: false,
-		},
-		{
-			name: "Snowstalgia",
-			cover:
-				"https://chillhop.com/wp-content/uploads/2020/10/0e5bb63f838ff92eeac142aae944e9f678df13c9-1024x1024.jpg",
-			artist: "invention_",
-			audio: "https://mp3.chillhop.com/serve.php/?mp3=10305",
-			color: ["#45418E", "#CDB6CA"],
-			id: uuidv4(),
-			active: false,
-		},
+
 		{
 			name: "Flowers",
 			cover:
