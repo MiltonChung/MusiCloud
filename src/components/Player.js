@@ -68,6 +68,8 @@ const Player = ({
 		audioRef.current.volume = volume / 100;
 	};
 
+	console.log(navigator.userAgent);
+
 	return (
 		<div className="player">
 			<div className="time-control">
@@ -112,7 +114,12 @@ const Player = ({
 						title="Skip to next song"
 					/>
 				</div>
-				<div className="volumeControl">
+				<div
+					className={`volumeControl ${
+						/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+							? "hideMobile"
+							: ""
+					}`}>
 					<FontAwesomeIcon icon={faVolumeDown} title="Louder" />
 					<div className="volume">
 						<input
