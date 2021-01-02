@@ -3,7 +3,8 @@ import { useState, useRef, useEffect } from "react";
 
 const Song = ({ currentSong, isPlaying }) => {
 	let [wave] = useState(new Wave());
-	const options = { type: "bars", colors: ["blue", "red", "green"] };
+	const [canvasVisibility, setcanvasVisibility] = useState(true);
+	const options = { type: "bars" };
 	wave.fromElement("audioID", "visualizer", options);
 
 	const canvasEl = useRef(null);
@@ -16,12 +17,27 @@ const Song = ({ currentSong, isPlaying }) => {
 		window.addEventListener("resize", handleResize);
 	});
 
+	const canvasHandler = () => {
+		console.log("click");
+		if (canvasVisibility) {
+			canvasEl.current.style.opacity = 0;
+			setcanvasVisibility(!canvasVisibility);
+		} else {
+			canvasEl.current.style.opacity = 1;
+			setcanvasVisibility(!canvasVisibility);
+		}
+	};
+
 	return (
 		<div className="song-container">
 			<div className="songInfo">
 				<h2>{currentSong.name}</h2>
 				<h3>{currentSong.artist}</h3>
-				<canvas id="visualizer" ref={canvasEl}></canvas>
+				<canvas
+					id="visualizer"
+					ref={canvasEl}
+					onClick={canvasHandler}
+					title={`Click to turn ${canvasVisibility ? "off" : "on"} visualizer`}></canvas>
 			</div>
 			<img alt={currentSong.name} src={currentSong.cover}></img>
 		</div>

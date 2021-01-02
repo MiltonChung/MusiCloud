@@ -95,22 +95,25 @@ const Player = ({
 						className="skip-back"
 						size="2x"
 						icon={faStepBackward}
+						title="To previous song"
 					/>
 					<FontAwesomeIcon
 						onClick={playSongHandler}
 						className="play"
 						size="2x"
 						icon={isPlaying ? faPause : faPlay}
+						title="Play"
 					/>
 					<FontAwesomeIcon
 						onClick={() => skipTrackHandler("skip-forward")}
 						className="skip-forward"
 						size="2x"
 						icon={faStepForward}
+						title="Skip to next song"
 					/>
 				</div>
 				<div className="volumeControl">
-					<FontAwesomeIcon icon={faVolumeDown} />
+					<FontAwesomeIcon icon={faVolumeDown} title="Louder" />
 					<div className="volume">
 						<input
 							type="range"
@@ -121,7 +124,7 @@ const Player = ({
 							onChange={volumeHandler}
 						/>
 					</div>
-					<FontAwesomeIcon icon={faVolumeUp} />
+					<FontAwesomeIcon icon={faVolumeUp} title="Softer" />
 				</div>
 			</div>
 		</div>
