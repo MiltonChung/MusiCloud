@@ -63,7 +63,7 @@ function App() {
 		<div className="App">
 			<Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
 			<main className={`${libraryStatus ? "squeezed" : ""}`}>
-				<Song currentSong={currentSong} />
+				<Song currentSong={currentSong} isPlaying={isPlaying} />
 				<Player
 					isPlaying={isPlaying}
 					setIsPlaying={setIsPlaying}
@@ -91,6 +91,7 @@ function App() {
 					onTimeUpdate={timeUpdateHandler}
 					ref={audioRef}
 					src={currentSong.audio}
+					id="audioID"
 					onEnded={songEndHandler}></audio>
 			</main>
 		</div>

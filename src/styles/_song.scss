@@ -3,17 +3,20 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	font-family: "Ubuntu", sans-serif;
 	max-width: 1400px;
+	width: 80%;
 	margin: 0 auto;
 	img {
-		width: 30%;
+		width: 35%;
+		position: relative;
 		border-radius: 50%;
 	}
 
 	.songInfo {
 		display: flex;
+		width: 50%;
 		flex-direction: column;
 		align-items: flex-start;
 		h2 {
@@ -24,6 +27,11 @@
 		h3 {
 			font-size: 2.2rem;
 			font-weight: 500;
+		}
+		canvas {
+			margin-top: 2rem;
+			width: 100%;
+			height: auto;
 		}
 	}
 }
