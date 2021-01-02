@@ -7,12 +7,9 @@
 	left: 0;
 	width: 25%;
 	height: 100%;
-	background: white;
-	box-shadow: 2px 2px 50px rgb(204, 204, 204);
+	background: rgba(243, 250, 255, 0.575);
+	box-shadow: 2px 2px 50px rgba(54, 54, 54, 0.397);
 	overflow: scroll;
-	h2 {
-		padding: 2.1rem;
-	}
 }
 
 .library-song {
@@ -22,20 +19,25 @@
 	cursor: pointer;
 	transition: background 0.5s ease;
 	img {
-		width: 30%;
+		width: 33%;
 	}
 	&:hover {
-		background: rgb(159, 211, 231);
+		background: #52aeffa6;
 	}
 }
 
 .song-description {
 	padding-left: 1rem;
 	h3 {
-		font-size: 1rem;
+		font-size: 1.1rem;
+		color: black;
+		margin-bottom: 0.2rem;
+		font-weight: bold;
+		letter-spacing: 0.5px;
 	}
 	h4 {
-		font-size: 0.7rem;
+		color: rgb(117, 117, 117);
+		font-size: 0.8rem;
 	}
 }
 
@@ -51,13 +53,17 @@
 	background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-	background-color: rgba(155, 155, 155, 0.5);
+	background-color: #52aeffa6;
 	border-radius: 20px;
 	border: transparent;
 }
 
 .selected {
-	background-color: rgb(159, 184, 231);
+	background-color: #1b7ed4;
+	h3,
+	h4 {
+		color: white;
+	}
 }
 
 .active-library {

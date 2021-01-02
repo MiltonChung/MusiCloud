@@ -21,8 +21,7 @@ function musicList() {
 		},
 		{
 			name: "Starving",
-			cover:
-				"https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Starving_%28featuring_Zedd%29_%28Official_Single_Cover%29_by_Hailee_Steinfled_and_Grey.png/220px-Starving_%28featuring_Zedd%29_%28Official_Single_Cover%29_by_Hailee_Steinfled_and_Grey.png",
+			cover: "https://m.media-amazon.com/images/I/71XPZvHWBNL._SS500_.jpg",
 			artist: "Hailee Steinfeld, Grey",
 			audio: `${Starving}`,
 			color: ["#17161D", "#791B1D"],
@@ -60,8 +59,7 @@ function musicList() {
 		},
 		{
 			name: "Ultralife",
-			cover:
-				"https://upload.wikimedia.org/wikipedia/en/thumb/6/65/Ultralife_-_Oh_Wonder_%28Album_Cover%29.png/220px-Ultralife_-_Oh_Wonder_%28Album_Cover%29.png",
+			cover: "https://m.media-amazon.com/images/I/81VO8rj3vLL._SS500_.jpg",
 			artist: "Oh Wonder",
 			audio: `${Ultralife}`,
 			color: ["#544C49", "#BFC0C2"],
@@ -70,8 +68,7 @@ function musicList() {
 		},
 		{
 			name: "Blueberry Faygo",
-			cover:
-				"https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Lil_Mosey_-_Blueberry_Faygo.png/220px-Lil_Mosey_-_Blueberry_Faygo.png",
+			cover: "https://m.media-amazon.com/images/I/81JrhcAZV9L._SS500_.jpg",
 			artist: "Lil Mosey",
 			audio: `${BlueberryFaygo}`,
 			color: ["#00CDF7", "#006DBE"],

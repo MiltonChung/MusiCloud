@@ -35,13 +35,26 @@ nav {
 		background: transparent;
 		border: none;
 		cursor: pointer;
-		border: 2px solid rgb(65, 65, 65);
+		border: 2px solid #1b7ed4;
 		padding: 0.5rem;
 		transition: all 0.3s ease;
+		border-radius: 5px;
+		outline: none;
+		font-size: 1rem;
+		font-weight: bold;
+
 		&:hover {
-			background: rgb(65, 65, 65);
+			background: #1b7ed4;
 			color: white;
 		}
+	}
+	button.active {
+		background: #1b7ed4;
+		color: white;
+		transition: all 0.3s ease;
+	}
+	button.active:hover {
+		opacity: 0.9;
 	}
 }
 

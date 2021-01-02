@@ -4,6 +4,8 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
+	max-width: 1400px;
+	margin: 0 auto;
 }
 
 .time-control {
@@ -144,6 +146,6 @@ input[type="range"]::-moz-range-thumb {
 		width: 90%;
 	}
 	.play-control {
-		width: 60%;
+		width: 90%;
 	}
 }

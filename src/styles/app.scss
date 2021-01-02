@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 * {
 	margin: 0;
 	padding: 0;
@@ -19,20 +21,17 @@ h4 {
 .App {
 	padding: 30px;
 	min-height: 100vh;
-	max-height: 1440px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
+	background: linear-gradient(to right, #e2e2e24d, #be8bce5e, #1b7ed45e);
 
 	@media screen and (max-width: 768px) {
 		padding: 15px;
 	}
 	transition: all 0.5s ease;
 }
-// .library-active {
-// 	margin-left: 25%;
-// 	width: 75%;
-// }
+
 main {
 	width: 100%;
 	transition: all ease 0.5s;
