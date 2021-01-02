@@ -34,7 +34,16 @@
 			height: auto;
 			cursor: pointer;
 			background: rgb(242, 242, 242);
+			border-left: 1px rgba(165, 165, 165, 0.274) solid;
+			border-top: 1px rgba(165, 165, 165, 0.274) solid;
 			box-shadow: 5px 5px 4px rgba(117, 117, 117, 0.288);
+		}
+		small {
+			margin-top: 0.35rem;
+			margin-left: 0.3rem;
+			color: rgb(134, 134, 134);
+			font-family: "Ubuntu", sans-serif;
+			font-size: 11.5px;
 		}
 	}
 }

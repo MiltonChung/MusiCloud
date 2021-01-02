@@ -4,7 +4,7 @@ import { faMusic } from "@fortawesome/free-solid-svg-icons";
 const Nav = ({ setLibraryStatus, libraryStatus }) => {
 	return (
 		<nav className={`${libraryStatus ? "squeezed" : ""}`}>
-			<a href="https://miltonchung.com/" className="logo">
+			<a href="https://miltonchung.com/" className="logo" title="Go to Milton's Portfolio Website!">
 				Musi<span>Cloud</span>
 			</a>
 			<button

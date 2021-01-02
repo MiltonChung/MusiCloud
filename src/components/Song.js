@@ -38,6 +38,7 @@ const Song = ({ currentSong, isPlaying }) => {
 					ref={canvasEl}
 					onClick={canvasHandler}
 					title={`Click to turn ${canvasVisibility ? "off" : "on"} visualizer`}></canvas>
+				<small>{`Click above to turn ${canvasVisibility ? "off" : "on"} visualizer`}</small>
 			</div>
 			<img alt={currentSong.name} src={currentSong.cover}></img>
 		</div>

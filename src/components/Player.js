@@ -68,8 +68,6 @@ const Player = ({
 		audioRef.current.volume = volume / 100;
 	};
 
-	console.log(navigator.userAgent);
-
 	return (
 		<div className="player">
 			<div className="time-control">
@@ -114,13 +112,14 @@ const Player = ({
 						title="Skip to next song"
 					/>
 				</div>
+				{/* https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser */}
 				<div
 					className={`volumeControl ${
 						/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 							? "hideMobile"
 							: ""
 					}`}>
-					<FontAwesomeIcon icon={faVolumeDown} title="Louder" />
+					<FontAwesomeIcon icon={faVolumeDown} title="Volume Down" />
 					<div className="volume">
 						<input
 							type="range"
@@ -131,7 +130,7 @@ const Player = ({
 							onChange={volumeHandler}
 						/>
 					</div>
-					<FontAwesomeIcon icon={faVolumeUp} title="Softer" />
+					<FontAwesomeIcon icon={faVolumeUp} title="Volume Up" />
 				</div>
 			</div>
 		</div>
