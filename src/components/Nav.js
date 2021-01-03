@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMusic, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
-import { useState, useRef } from "react";
 
 const Nav = ({ setLibraryStatus, libraryStatus, darkMode, setDarkMode, appRef }) => {
 	const toggleDarkLight = () => {
@@ -19,8 +18,7 @@ const Nav = ({ setLibraryStatus, libraryStatus, darkMode, setDarkMode, appRef })
 					{darkMode ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
 				</button>
 				<button
-					className={`${libraryStatus ? "active" : ""}`}
-					className="libraryBtn"
+					className={`libraryBtn ${libraryStatus ? "active" : ""}`}
 					onClick={() => setLibraryStatus(!libraryStatus)}>
 					Library <FontAwesomeIcon icon={faMusic} />
 				</button>
