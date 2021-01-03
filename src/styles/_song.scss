@@ -48,6 +48,37 @@
 	}
 }
 
+.song-playing {
+	animation: rotation 8s infinite linear;
+}
+
+@-moz-keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+@-webkit-keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.song-container {
 		flex-direction: column;

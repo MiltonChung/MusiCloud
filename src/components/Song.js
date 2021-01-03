@@ -40,7 +40,7 @@ const Song = ({ currentSong, isPlaying }) => {
 					title={`Click to turn ${canvasVisibility ? "off" : "on"} visualizer`}></canvas>
 				<small>{`Click above to turn ${canvasVisibility ? "off" : "on"} visualizer`}</small>
 			</div>
-			<img alt={currentSong.name} src={currentSong.cover}></img>
+			<img alt={currentSong.name} src={currentSong.cover} className={isPlaying ? "song-playing" : ""}></img>
 		</div>
 	);
 };
