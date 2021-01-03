@@ -19,9 +19,11 @@ function App() {
 	});
 	const [libraryStatus, setLibraryStatus] = useState(false);
 	const [volume, setVolume] = useState(60);
+	const [darkMode, setDarkMode] = useState(false);
 
 	// Refs
 	const audioRef = useRef(null);
+	const appRef = useRef(null);
 
 	// Functions/Events
 	const timeUpdateHandler = e => {
@@ -60,8 +62,14 @@ function App() {
 	};
 
 	return (
-		<div className="App">
-			<Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
+		<div className="App" ref={appRef}>
+			<Nav
+				libraryStatus={libraryStatus}
+				setLibraryStatus={setLibraryStatus}
+				darkMode={darkMode}
+				setDarkMode={setDarkMode}
+				appRef={appRef}
+			/>
 			<main className={`${libraryStatus ? "squeezed" : ""}`}>
 				<Song currentSong={currentSong} isPlaying={isPlaying} />
 				<Player

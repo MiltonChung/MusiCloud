@@ -42,6 +42,134 @@ main {
 	}
 }
 
+.App.DARK-MODE {
+	background: rgb(34, 34, 34);
+	nav {
+		.logo {
+			color: white;
+
+			span {
+				color: #3ea3fc;
+			}
+		}
+
+		button.libraryBtn {
+			border: 2px solid #3ea3fc;
+			color: white;
+
+			&:hover {
+				background: #3ea3fc;
+				color: white;
+			}
+		}
+		button.libraryBtn.active {
+			background: #3ea3fc;
+			border: 2px solid white;
+			color: white;
+		}
+		button.toggleDarkLightBtn {
+			color: rgb(214, 214, 54);
+			transition: all 0.2s;
+		}
+		button.toggleDarkLightBtn:hover {
+			color: rgb(247, 247, 203);
+		}
+	}
+
+	.song-container {
+		img {
+			box-shadow: 0 0 30px 10px #6bdbfd31;
+		}
+
+		.songInfo {
+			h2 {
+				color: whitesmoke;
+			}
+			h3 {
+				color: rgb(206, 206, 206);
+			}
+			canvas {
+				background: rgb(223, 223, 223);
+				box-shadow: 2px 2px 14px #fcfcfc1e;
+			}
+			small {
+				color: rgb(206, 206, 206);
+			}
+		}
+	}
+
+	.time-control {
+		color: whitesmoke;
+	}
+
+	.animate-track {
+		background: rgb(206, 206, 206);
+	}
+
+	.play-control {
+		.playerControl {
+			.fa-play,
+			.fa-pause {
+				color: #2d9bfc;
+			}
+			.fa-step-backward,
+			.fa-step-forward {
+				color: rgb(240, 240, 240);
+			}
+		}
+		.volumeControl {
+			svg {
+				color: rgb(206, 206, 206);
+			}
+
+			.volume {
+				.slider {
+					background: rgb(206, 206, 206);
+					opacity: 1;
+				}
+
+				.slider::-webkit-slider-thumb {
+					background: #2d9bfc;
+
+					box-shadow: -100vw 0 0 99.7vw #7ec3ff;
+					@media (max-width: 768px) {
+						box-shadow: -100vw 0 0 99.1vw #7ec3ff;
+					}
+				}
+				.slider::-moz-range-thumb {
+					background: #2d9bfc;
+					box-shadow: -100vw 0 0 99.7vw #7ec3ff;
+					@media (max-width: 768px) {
+						box-shadow: -100vw 0 0 99.1vw #7ec3ff;
+					}
+				}
+			}
+		}
+	}
+
+	.library {
+		background: rgb(131, 131, 131);
+		box-shadow: 2px 0px 20px rgba(86, 143, 189, 0.397);
+	}
+
+	.song-description {
+		h3 {
+			color: black;
+		}
+		h4 {
+			color: rgb(36, 36, 36);
+		}
+	}
+
+	.selected {
+		background-color: #1b7ed4;
+		h3,
+		h4 {
+			color: white;
+		}
+	}
+}
+
 @import "./song.scss";
 @import "./player.scss";
 @import "./library.scss";

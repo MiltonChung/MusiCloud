@@ -31,31 +31,51 @@ nav {
 		}
 	}
 
-	button {
-		background: transparent;
-		border: none;
-		cursor: pointer;
-		border: 2px solid #1b7ed4;
-		padding: 0.5rem;
-		transition: all 0.3s ease;
-		border-radius: 5px;
-		outline: none;
-		font-size: 1rem;
-		font-weight: bold;
+	.buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		button.libraryBtn {
+			background: transparent;
+			border: none;
+			cursor: pointer;
+			border: 2px solid #1b7ed4;
+			padding: 0.5rem;
+			transition: all 0.3s ease;
+			border-radius: 5px;
+			outline: none;
+			font-size: 1rem;
+			font-weight: bold;
 
-		&:hover {
-			background: #1b7ed4;
-			color: white;
+			&:hover {
+				background: #1b7ed4;
+				color: white;
+			}
 		}
-	}
-	button.active {
-		background: #1b7ed4;
-		border: 2px solid black;
-		color: white;
-		transition: all 0.3s ease;
-	}
-	button.active:hover {
-		opacity: 0.9;
+		button.libraryBtn.active {
+			background: #1b7ed4;
+			border: 2px solid black;
+			color: white;
+			transition: all 0.3s ease;
+		}
+		button.libraryBtn.active:hover {
+			opacity: 0.9;
+		}
+
+		button.toggleDarkLightBtn {
+			margin-top: 0.1rem;
+			background: transparent;
+			border: none;
+			cursor: pointer;
+			margin-right: 1rem;
+			transition: all 0.5s ease;
+			outline: none;
+			color: black;
+			font-size: 25px;
+		}
+		button.toggleDarkLightBtn:hover {
+			color: rgb(255, 255, 255);
+		}
 	}
 }
 

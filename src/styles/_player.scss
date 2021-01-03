@@ -135,14 +135,21 @@ input[type="range"]::-moz-range-thumb {
 			border-radius: 50%;
 			background: #0170d1;
 			cursor: pointer;
-			box-shadow: -100vw 0 0 100vw rgb(160, 207, 255);
+			box-shadow: -100vw 0 0 99.7vw #8ec9fd;
+			@media (max-width: 768px) {
+				box-shadow: -100vw 0 0 99.1vw #8ec9fd;
+			}
 		}
+		// rgb(160, 207, 255);
 		.slider::-moz-range-thumb {
 			width: 15px;
 			height: 15px;
 			border-radius: 50%;
 			background: #0170d1;
-			box-shadow: -100vw 0 0 100vw rgb(160, 207, 255);
+			box-shadow: -100vw 0 0 99.7vw #8ec9fd;
+			@media (max-width: 768px) {
+				box-shadow: -100vw 0 0 99.1vw #8ec9fd;
+			}
 			cursor: pointer;
 		}
 	}
