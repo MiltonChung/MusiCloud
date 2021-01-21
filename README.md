@@ -1,6 +1,7 @@
 # MusiCloud
 
 Simple Music Player website that allows the user to choose and play music from the library.
+
 Link: https://musicloudr.netlify.app/
 
 ## Table of contents
@@ -20,7 +21,7 @@ This react project utilizes the basics of react like useEffect, useState, useRef
 Project is created with:
 
 -  React
--  React Hooks
+-  React Hooks (useEffect, useState, useRef)
 -  Sass
 -  HTML/CSS
 
@@ -36,7 +37,7 @@ Project is created with:
 
 ## Setup
 
-To run this project, install it locally using npm:
+To run this project, install it locally using npm and go into the root folder:
 
 ```
 $ npm install
