@@ -9,6 +9,7 @@ Link: https://musicloudr.netlify.app/
 -  [About](#about)
 -  [Technologies](#technologies)
 -  [Features](#features)
+-  [Challenges](#challenges)
 -  [Setup](#setup)
 -  [Inspiration](#inspiration)
 
@@ -34,6 +35,12 @@ Project is created with:
 -  Dark mode
 -  Music visualizer
 -  Mobile friendly
+
+## Challenges
+
+-  The visualizer was hard to work with because it uses the HTML canvas property and making it responsive.
+-  Customizing the input sliders to look more elegant was a challenge especially making it look the same in different browsers
+-  First time implementing the audio tag in HTML and React respond to user input
 
 ## Setup
 
