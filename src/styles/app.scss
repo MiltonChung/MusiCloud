@@ -24,7 +24,8 @@ h4 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	background: linear-gradient(to right, #e2e2e24d, #be8bce5e, #1b7ed45e);
+	// background: linear-gradient(to right, #e2e2e24d, #be8bce5e, #1b7ed45e);
+	background: #868ef35e;
 
 	@media screen and (max-width: 768px) {
 		padding: 15px;
